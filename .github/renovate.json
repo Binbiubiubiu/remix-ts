@@ -1,0 +1,14 @@
+{
+  "extends": ["config:base", ":semanticCommitsDisabled"],
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["eslint", "commitlint"],
+      "labels": ["dependencies", "linting"]
+    },
+    {
+      "matchDepTypes": ["optionalDependencies"],
+      "addLabels": ["optional"]
+    }
+  ]
+}
